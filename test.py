@@ -91,7 +91,7 @@ else:
     index = load_index_from_storage(
         storage_context, service_context=service_context)
 
-query_engine = index.as_query_engine()
+query_engine = index.as_query_engine(response_mode="compact")
 response = query_engine.query("用中文回答，大腸癌的成因")
 # response = query_engine.query("what is the cause of colorectal cancer?")
 # response = query_engine.query("what is colorectal cancer?")
