@@ -1,3 +1,20 @@
+"""
+Purpose of this test:
+To test whether we are able to embed and retrieve documents to langchain's
+embedding function. 
+
+Last Finding:
+From investigating the payload of the callback of the steps in the chain,
+it seems that it cannot retrieve related content from the embedding of the PDF.
+The LLM should be providing the answer from it's own knowledge
+
+TODO:
+1. Check how to print the progress of the chain for UI feedback purposes
+2. Try embedding a smaller chunk of the PDF and ask the answer about the content
+to see if it could retrieve semantics related content from the emdeddings
+"""
+
+
 from llama_index import StorageContext, load_index_from_storage
 import os
 import openai

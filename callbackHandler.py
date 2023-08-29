@@ -15,6 +15,8 @@ class CallbackHandler(BaseCallbackHandler):
     ) -> str:
         """Run when an event starts and return id of event."""
         print("start", event_type)
+        print(payload)
+        print("---------------------\n")
 
     def on_event_end(
         self,
@@ -25,6 +27,8 @@ class CallbackHandler(BaseCallbackHandler):
     ) -> None:
         """Run when an event ends."""
         print("end", event_type)
+        print(payload)
+        print("---------------------\n")
 
     def start_trace(self, trace_id: Optional[str] = None) -> None:
         """Run when an overall trace is launched."""
